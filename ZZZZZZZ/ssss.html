@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.1.0.min.js" ></script>
+	<script>  
+	window.onload=function(){
+var d = document.getElementById("test");  
+var nodeList = d.getElementsByTagName("span");  
+function num(){
+for( i = 0;i<nodeList.length;i++){
+    alert(nodeList[i].innerHTML);   
+}  
+}
+ setTimeout(num(),3000);
+}
+</script>  
+	<style>
+		li{
+			height: 100px;
+			width: 100px;
+			border: 1px solid black;
+		}
+	</style>
+	</head>
+	<div id="test">  
+     <span>1</span>  
+     <span>2</span>  
+      <span>3</span>  
+       <span>4</span>  
+</div>  
+</html>
