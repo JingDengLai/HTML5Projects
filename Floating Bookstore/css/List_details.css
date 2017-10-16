@@ -1,0 +1,245 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	width: 100%;
+	position: absolute;
+}
+
+
+/*---------------------手机端样式----------------------*/
+@media screen and (max-width: 960px) {
+#head{
+	width: 100%;
+	height: 45px;
+	background-color:#D0D0D0 ;
+	opacity: 0.8;
+	border: 1px solid #D0D0D0;
+	margin: 0 auto;
+}
+#head div{
+	float: left;
+}
+
+#head #return{
+	width: 6%;
+	height: 20px;
+	margin-left: 2%;
+	margin-top: 3%;
+}
+
+#head #return img{
+	height: 100%;
+	width: 100%;
+}
+
+#head #span{
+	height: 60%;
+	width: 30%;
+	margin-top: 3%;
+	margin-left: 5%;
+	color: white;
+}
+
+#title-content{
+	width: 100%;
+	height: 100px;
+	border: 1px solid #02C874;
+	background-color: #02C874;
+}
+#title-content #title{
+	width: 100%;
+	height: 30px;
+	border: 1px solid #02C874;
+	text-align: center;
+	color: white;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	margin-top: 5px;
+}
+#title-content #content{
+	width: 50%;
+	height: 45px;
+	border: 1px solid #02C874;
+	margin: 0 0 0 2%;
+	color: white;
+	font-size: 15px;
+	opacity: 0.7;
+}
+#title-content #number{
+	width: 50%;
+	height: 15px;
+	margin: 0 0 0 2%;
+}
+
+.book-add{
+	width: 100%;
+	overflow: hidden;
+}
+
+.book-add .book{
+	width: 94%;
+	height:120px;
+	margin: 10px 3% 0;
+	border: 1px solid white;
+	border-bottom: 1px solid #808080;
+}
+
+.book-add .book #image{
+	width: 10%;
+	height: 40%;
+	margin: 3% 0 0 2%;
+	float: left;
+}
+
+.book-add .book #image img{
+	width: 100%;
+	height: 100%;
+}
+
+.book-add .book .book_name{
+	width: 80%;
+	height: 40%;
+	margin: 4% 0 0 15%;
+	font-size: 18px;
+}
+
+.book-add .book .book_text{
+	width: 95%;
+	height: 35%;
+	margin: 2% 0 0 2%;
+	border: 1px solid white;
+}
+
+#last-level{
+	width: 100%;
+	height: 45px;
+	background-color: forestgreen;
+	opacity: 0.8;
+	position: fixed;
+	bottom: 0px;
+	text-align: center;
+	color: white;
+}
+}
+
+/*---------------------电脑端样式----------------------*/
+@media screen and (min-width: 960px) {
+#head{
+	width: 40%;
+	height: 45px;
+	background-color:#D0D0D0 ;
+	opacity: 0.8;
+	border: 1px solid #D0D0D0;
+	margin: 0 auto;
+}
+#head div{
+	float: left;
+}
+
+#head #return{
+	width: 6%;
+	height: 20px;
+	margin-left: 2%;
+	margin-top: 3%;
+}
+
+#head #return img{
+	height: 100%;
+	width: 100%;
+}
+
+#head #span{
+	height: 60%;
+	width: 30%;
+	margin-top: 3%;
+	margin-left: 5%;
+	color: white;
+}
+
+#title-content{
+	width: 40%;
+	height: 100px;
+	border: 1px solid #02C874;
+	background-color: #02C874;
+	margin: 0 auto;
+}
+#title-content #title{
+	width: 100%;
+	height: 30px;
+	border: 1px solid #02C874;
+	text-align: center;
+	color: white;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	margin-top: 5px;
+}
+#title-content #content{
+	width: 50%;
+	height: 45px;
+	border: 1px solid #02C874;
+	margin: 0 0 0 2%;
+	color: white;
+	font-size: 15px;
+	opacity: 0.7;
+}
+#title-content #number{
+	width: 50%;
+	height: 15px;
+	margin: 0 0 0 2%;
+}
+
+.book-add{
+	width: 40%;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.book-add .book{
+	width: 94%;
+	height:120px;
+	margin: 10px 3% 0;
+	border: 1px solid white;
+	border-bottom: 1px solid #808080;
+}
+
+.book-add .book #image{
+	width: 10%;
+	height: 40%;
+	margin: 3% 0 0 2%;
+	float: left;
+}
+
+.book-add .book #image img{
+	width: 100%;
+	height: 100%;
+}
+
+.book-add .book .book_name{
+	width: 80%;
+	height: 40%;
+	margin: 4% 0 0 15%;
+	font-size: 18px;
+}
+
+.book-add .book .book_text{
+	width: 95%;
+	height: 35%;
+	margin: 2% 0 0 2%;
+	border: 1px solid white;
+}
+
+#last-level{
+	width: 40%;
+	height: 45px;
+	background-color: forestgreen;
+	opacity: 0.8;
+	position: fixed;
+	bottom: 0px;
+	left: 30%;
+	text-align: center;
+	color: white;
+}
+}

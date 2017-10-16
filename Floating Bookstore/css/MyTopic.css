@@ -1,0 +1,235 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	width: 100%;
+	position: absolute;
+}
+/*---------------------手机端样式---------------------------*/
+@media screen and (max-width: 960px) {
+	
+#head{
+	width: 100%;
+	height: 45px;
+	background-color:#D0D0D0 ;
+	opacity: 0.8;
+	border: 1px solid #D0D0D0;
+}
+#head div{
+	float: left;
+}
+
+#head #return{
+	width: 6%;
+	height: 20px;
+	margin-left: 2%;
+	margin-top: 3.5%;
+}
+
+#head #return img{
+	height: 100%;
+	width: 100%;
+}
+
+#head #span{
+	height: 60%;
+	width: 30%;
+	margin-top: 3.5%;
+	margin-left: 5%;
+	color: white;
+}
+
+#image{
+	width: 100%;
+	height: 120px;
+	background-color: #BBFFFF;
+	border: 1px solid #BBFFFF;
+}
+
+#image div{
+	width: 18%;
+	height: 50%;
+	margin: 5% auto;
+}
+
+#image div img{
+	width: 100%;
+	height: 100%;
+}
+
+#titles{
+	width: 100%;
+	height: 35px;
+}
+
+#titles ul{
+	width: 100%;
+	height: 100%;
+}
+
+#titles li{
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	float: left;
+	list-style: none;
+	line-height: 200%;
+	
+}
+
+.select{
+	color: limegreen;
+	border-bottom: 2px solid limegreen;
+}
+
+#content{
+	width: 100%;
+	margin-top: 30px;
+}
+
+#content #topic,#borrow-book,#reservebook{
+	width: 100%;
+}
+
+#content #topic ul{
+	width: 100%;
+	height: 70px;
+	list-style: none;
+	border: 1px solid white;
+	background-color: #F0F0F0;
+}
+
+#content #topic li:first-child{
+	margin-left: 5%;
+	margin-top: 10px;
+	height: 20px;
+	width: 30%;
+}
+
+#content #topic li:last-child{
+	margin-left: 5%;
+	margin-top: 10px;
+	height: 20px;
+	width: 60%;
+
+	font-size: 14px;
+	opacity: 0.5;
+}
+
+
+}
+
+/*-------------------电脑端样式-----------------------*/
+@media screen and (min-width: 960px) {
+	#head{
+	width: 40%;
+	margin: 0 auto;
+	height: 45px;
+	background-color:#D0D0D0 ;
+	border: 1px solid #D0D0D0;
+}
+#head div{
+	float: left;
+}
+
+#head #return{
+	width: 6%;
+	height: 20px;
+	margin-left: 2%;
+	margin-top: 2%;
+}
+
+#head #return img{
+	height: 100%;
+	width: 100%;
+}
+
+#head #span{
+	height: 60%;
+	width: 30%;
+	margin-top: 2%;
+	margin-left: 5%;
+	color: white;
+}
+
+#image{
+	width: 40%;
+	height: 120px;
+	margin: 0 auto;
+	background-color: #BBFFFF;
+	border: 1px solid #BBFFFF;
+}
+
+#image div{
+	width: 18%;
+	height: 50%;
+	margin: 5% auto;
+}
+
+#image div img{
+	width: 100%;
+	height: 100%;
+}
+
+#titles{
+	width: 40%;
+	height: 35px;
+	margin: 0 auto;
+}
+
+#titles ul{
+	width: 100%;
+	height: 100%;
+}
+
+#titles li{
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	float: left;
+	list-style: none;
+	line-height: 200%;
+	
+}
+
+.select{
+	color: limegreen;
+	border-bottom: 2px solid limegreen;
+}
+
+#content{
+	width: 40%;
+	margin: 30px auto;
+}
+
+#content #message,#borrow-book,#reservebook{
+	width: 100%;
+}
+
+#content #topic ul{
+	width: 100%;
+	height: 70px;
+	list-style: none;
+	border: 1px solid white;
+	background-color: #F0F0F0;
+}
+
+#content #topic li:first-child{
+	margin-left: 5%;
+	margin-top: 10px;
+	height: 20px;
+	width: 30%;
+}
+
+#content #topic li:last-child{
+	margin-left: 5%;
+	margin-top: 10px;
+	height: 20px;
+	width: 60%;
+	font-size: 14px;
+	opacity: 0.5;
+}
+	}
+
