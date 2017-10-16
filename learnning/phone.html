@@ -1,0 +1,197 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+    <title>HTML5 GetUserMedia Demo</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />  
+    <style>
+    *{
+    	margin: 0;
+    	padding: 0;
+    }
+         html,body{
+         	width: 100%;      	
+         }
+    	
+    	canvas{
+    		display: none;
+    		height: 100px;
+    		width: 100px;
+    	}
+    	
+    	#box{
+    		width: 100%;
+    		height: 600px;
+    		position: absolute;
+    	}
+    	#medi{
+    		width: 100%;
+    		height: 100%;
+    	}
+    	
+    	#innerDiv{
+    		border: 2px solid black;
+    		position: absolute;
+    		display: none;
+    	}
+    	#ZG{
+    		width: 100%;
+    		background-color: black;
+    		opacity: 0.4;
+    		position: absolute;
+    		display: none;
+    	}
+    	#left_Z{
+    		display: none;
+    		background-color: black;
+    		opacity: 0.4;
+    		position: absolute;
+    	}
+    	#right_Z{
+    		background-color: black;
+    		opacity: 0.4;
+    		position: absolute;
+    		display: none;
+    	}
+    	#bottom_Z{
+    		width: 100%;
+    		background-color: black;
+    		opacity: 0.4;
+    		position: absolute;
+    		display: none;
+    	}
+    </style>
+</head>  
+<body>   
+	<input type="button" style="display:block;" value="开启摄像头" onclick="getMedia();" />
+    <div id="box">
+    <video id="medi" autoplay="autoplay"></video>
+    </div>
+    <div id="innerDiv"></div>
+    <div id="ZG"></div>
+    <div id="left_Z"></div>
+    <div id="right_Z"></div>
+    <div id="bottom_Z"></div>
+    <canvas id="canvas"></canvas>
+    <script type="text/javascript" src="js/jquery.js" ></script>
+    <script type="text/javascript">
+   
+        var video = document.querySelector('video');  
+        var audio, audioType;  
+  
+        var canvas = document.getElementById('canvas');  
+        var context = canvas.getContext('2d');  
+        
+        var height=document.getElementById("medi").offsetHeight; 
+        var width=document.getElementById("medi").offsetWidth;
+        document.getElementById("innerDiv").style.height=width/2+"px";
+        document.getElementById("innerDiv").style.width=width/2+"px";
+        
+        var aheight=document.getElementById("box").offsetHeight;
+        var awidth=document.getElementById("box").offsetWidth;
+        document.getElementById("innerDiv").style.top=aheight/3+"px";
+        document.getElementById("innerDiv").style.left=(width/2-4)/2+"px";
+        
+        var ZG=document.getElementById("ZG");
+        var left_Z=document.getElementById("left_Z");
+        var right_Z=document.getElementById("right_Z");
+        var bottom_z=document.getElementById("bottom_Z");
+        ZG.style.height=aheight/3+"px";
+        left_Z.style.width=(width/2-4)/2+"px";
+        left_Z.style.height=width/2+4+"px";
+        left_Z.style.top=aheight/3+"px";
+        right_Z.style.width=(width/2-4)/2+"px";
+        right_Z.style.height=width/2+4+"px";
+        right_Z.style.top=aheight/3+"px";
+        right_Z.style.left=(width/2-4)/2+(width/2)+4+"px";
+        bottom_z.style.top=aheight/3+(width/2+4)+"px";
+        bottom_z.style.height=aheight-(aheight/3+(width/2+4))+"px";
+
+        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;  
+        window.URL = window.URL || window.webkitURL || window.mozURL || window.msURL;  
+  
+        var exArray = []; //存储设备源ID  
+        MediaStreamTrack.getSources(function (sourceInfos) {  
+            for (var i = 0; i != sourceInfos.length; ++i) {  
+                var sourceInfo = sourceInfos[i];  
+                //这里会遍历audio,video，所以要加以区分  
+                if (sourceInfo.kind === 'video') {  
+                    exArray.push(sourceInfo.id);  
+                }  
+            }  
+        });  
+        function getMedia(){  
+            if (navigator.getUserMedia) {  
+                navigator.getUserMedia({  
+                    'video': {  
+                        'optional': [{  
+                            'sourceId': exArray[1] //0为前置摄像头，1为后置  
+                        }]  
+                    },  
+                    'audio':false  
+                }, successFunc, errorFunc);    //success是获取成功的回调函数  
+            }  
+            else {  
+                alert('Native device media streaming (getUserMedia) not supported in this browser.');  
+            } 
+           setInterval(getPhoto,1000);
+           document.getElementById("innerDiv").style.display="block";
+           document.getElementsByTagName("input")[0].style.display="none";
+           ZG.style.display="block";
+           left_Z.style.display="block";
+           right_Z.style.display="block";
+           bottom_z.style.display="block";
+        } 
+  
+        function successFunc(stream) {  
+            //alert('Succeed to get media!');  
+            if (video.mozSrcObject !== undefined) {  
+                //Firefox中，video.mozSrcObject最初为null，而不是未定义的，我们可以靠这个来检测Firefox的支持  
+                video.mozSrcObject = stream;  
+            }  
+            else {  
+                video.src = window.URL && window.URL.createObjectURL(stream) || stream;  
+            }  
+        }  
+        function errorFunc(e) {  
+            alert('Error！'+e);  
+        }  
+  
+         var sx=(width/2-4)/2+10;
+         var sy=aheight/3-40;
+         var swidth=width/2+60;
+        //拍照  
+        function getPhoto() {  
+            context.drawImage(video,sx,sy,swidth,swidth, 0, 0,canvas.width,canvas.height); //将video对象内指定的区域捕捉绘制到画布上指定的区域，实现拍照。  
+            CatchCode();
+            
+        }
+        
+    function CatchCode() {          
+    if(canvas!=null)  
+        {    
+        //以下开始编 数据     
+        var imgData = canvas.toDataURL();   
+        //将图像转换为base64数据  
+        var base64Data = imgData;//.substr(22); //在前端截取22位之后的字符串作为图像数据  
+        //开始异步上  
+       $.post("saveimg.php", { "img": base64Data },function (result)  
+       {     
+            printHtml("解析结果："+result.data);  
+            if (result.status == "success" && result.data!="")  
+            {                   
+                printHtml("解析结果成功！");
+                
+            }else{    
+                startPat();//如果没有解析出来则重新抓拍解析         
+            }  
+       },"json");  
+    }  
+}        
+//      //视频  
+//      function getVedio() {  
+//          drawVideoAtCanvas(video, context2);  
+//      }  
+  
+    </script>  
+</body>  
+</html>  

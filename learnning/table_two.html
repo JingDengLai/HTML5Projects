@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<style>
+		    html,body{
+		    	width: 100%;
+		    }
+		    @media only screen and (min-width: 640px){
+		    
+			.table{
+				width: 60%;
+				margin: 70px auto;
+			}
+			table th,.table td { 
+                text-align: center; 
+            } 
+            #btn{
+            	text-align: center;
+            	margin: 0 auto;
+            }
+		    }
+		    
+		    @media only screen and (max-width: 640px){
+		    
+			.table{
+				margin: 30px auto;
+			}
+			table th,.table td { 
+                text-align: center;
+            } 
+            #btn{
+            	text-align: center;
+            	margin: 0 auto;
+            }
+		    }
+		    	
+		    
+		</style>
+	</head>
+	<body>
+		<table class="table table-striped table-bordered table-hover">
+			<!--<thead>
+              <tr>
+                <th colspan="4">
+                	欢迎您！
+                </th>               
+              </tr>-->
+            </thead>
+            <thead>
+              <tr>
+                <th>书籍</th>
+                <th>已借人</th>
+                <th>待借人</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>表格单元格</td>
+                <td>表格单元格</td>
+                <td>表格单元格</td>
+             </tr>
+             <tr>
+                <td>表格单元格</td>
+                <td>表格单元格</td>
+                <td>表格单元格</td>
+             </tr>
+             <tr>
+                <td>表格单元格</td>
+                <td>表格单元格</td>
+                <td>表格单元格</td>
+             </tr>
+             <tr>
+                <td>表格单元格</td>
+                <td>表格单元格</td>
+                <td>表格单元格</td>
+             </tr>
+            </tbody>
+        </table>
+        <div id="btn">
+        	<button class="btn btn-primary" id="prev">上一页</button>
+        	<span id="page">1</span>
+        	<button class="btn btn-primary" id="next">下一页</button>
+        </div>
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+        <script>
+        	var index=0;
+        	
+        	    $("#prev").on("click",function(){
+        		  if(index>0){
+        		 	index--;
+        			 $.ajax({
+                        type:"post",
+                        url:"/users/reg",
+                        data:{
+                         },
+                        success:function(){
+                            $("#page").html(index+1);
+                        }
+                     });
+        		  }else{
+        			
+        		 }
+        	   });
+        	
+        	$("#next").on("click",function(){
+        			index++;
+        			$.ajax({
+                        type:"post",
+                        url:"/users/reg",
+                        data:{
+                         },
+                        success:function(){
+                            $("#page").html(index+1);
+                        }
+                    });
+        	});
+        </script>
+	</body>
+</html>

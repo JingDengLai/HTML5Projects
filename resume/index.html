@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				height: 100%;
+			}
+			li{
+				list-style: none;
+			}
+			body {
+                -webkit-perspective: 3000px;
+                -moz-perspective: 3000px;
+                -ms-perspective: 3000px;
+                perspective: 3000px;
+            }
+            
+            .back{
+            	background-image: url(img/wood.jpg);
+            	width: 100%;
+            	height: 1000px;
+            }
+			
+			.box{
+				width: 400px;
+				height: 500px;
+				position: absolute;
+				top: 10%;
+				left: 600px;
+			}
+			
+			.page{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 400px;
+				height: 500px;	
+				-webkit-transform-origin: 0 50%;
+				transform:rotateY(0deg);
+				transform-style: preserve-3d;
+/*				border: 1px solid black;*/
+			}
+			
+			.page5{
+				width: 100%;
+				height: 100%;
+				background-image: url(img/page1.jpg);
+				background-size: 100% 100%;
+				display: block;
+			}
+			.page1,.page2,.page3,.page4{
+				width: 100%;
+				height: 100%;
+				background-image: url(img/page_back1.jpg);
+				background-size: 100% 100%;
+				display: block;
+				overflow: hidden;
+			}
+			
+			.message{
+				padding: 5px 5px 5px 5px;
+				margin: 13px 0 0 50px;
+			}
+			
+			.message table,.education table{
+				font-size: 20px;
+			}
+			
+			.message table td{
+				height: 30px;
+				width: 120px;
+			}
+			
+			.title_te{
+				padding: 5px 0 5px 15px;
+				background-color: #53FF53;
+				margin: 20px 0 0 40px;
+				width: 300px;
+				border-radius: 10px;
+			}
+			
+			.phone,.person{
+				margin: 20px 0 0 40px;
+				padding: 5px 0 5px 15px;
+				background-color: #53FF53;
+				width: 300px;
+				border-radius: 10px;
+			}
+			
+			
+			.title_te img,.phone img,.person img{
+				height: 30px;
+				width: 30px;
+				border-radius: 10px;
+			}
+			
+			.title_te span,.phone span,.person span{
+				position: relative;
+				top: -6px;
+				left: 10px;
+				font-size: 22px;
+				font-weight: bold;
+				color: white;
+			}
+			
+			.education,.pingjia{
+				padding: 5px 5px 5px 5px;
+				margin: 13px 0 0 50px;
+			}
+			
+			.pingjia p{
+				max-width: 300px;
+				line-height: 22px;
+				font-size: 17px;
+				text-indent: 35px;
+			}
+			
+			.education table td{
+				height: 30px;
+			}
+			
+			.education .QQ,.education .skill{
+				opacity: 0;
+			}
+			
+			.certificate{
+				padding: 10px 0 10px 15px;
+				background-color: #53FF53;
+				margin: 20px 0 0 40px;
+				width: 300px;
+				border-radius: 10px;
+			}
+			
+			.certificate span{
+				font-size: 22px;
+				font-weight: bold;
+				color: white;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="back"></div>
+	    <div class="box">
+	    	<ul>
+	    		<!--尾页-->
+	    		<li class="page" style="background-image: url(img/page0_back.jpg);background-size: 100% 100%;">
+	    			<div class="page0"></div>
+	    		</li>
+	    		<!--第四页-->
+	    		<li class="page" style="background-image: url(img/page_back1.jpg);background-size: 100% 100%;">
+	    			<div class="page1">
+	    				<div class="certificate">
+		    				<span>自我评价</span>
+	    				</div>
+	    				<div class="pingjia">
+	    					<p>
+	    					</p>
+	    				</div>
+	    				<div class="certificate">
+		    				<span>求职意向</span>
+	    				</div>
+	    				<div class="pingjia">
+	    					<p style="opacity: 0;">前端工程开发</p>
+	    				</div>
+	    			</div>
+	    		</li>
+	    		<!--第三页-->
+	    		<li class="page" style="background-image: url(img/page_back1.jpg);background-size: 100% 100%;">
+	    			<div class="page2">
+	    				<div class="certificate">
+		    				<span>赛事、证书</span>
+	    				</div>
+	    				<div class="education">
+		    				<table>
+		    					<tr>
+		    						<td class="skill">计算机JAVA二级</td>
+		    					</tr>
+	    						<tr>
+		    						<td class="skill">大学生英语B级</td>
+		    					</tr>
+		    					<tr>
+		    						<td class="skill">软件测试证书</td>
+		    					</tr>
+	    					</table>
+	    				</div>
+	    				<div class="certificate">
+		    				<span>技能、特长</span>
+	    				</div>
+	    				<div class="education">
+		    				<table>
+		    					<tr>
+		    						<td class="skill">H5前端语言</td>
+		    					</tr>
+		    					<tr>
+		    						<td class="skill">JAVA语言</td>
+		    					</tr>
+		    					<tr>
+		    						<td class="skill">Python语言</td>
+		    					</tr>
+		    					<tr>
+		    						<td class="skill">C语言</td>
+		    					</tr>
+		    				</table>
+	    				</div>
+	    				
+	    			</div>
+	    		</li>
+	    		<!--第二页-->
+	    		<li class="page" style="background-image: url(img/page_back1.jpg);background-size: 100% 100%;">
+	    			<div class="page3">
+	    				<div class="title_te">
+		    				<img src="img/tittle.jpg"/>
+			    			<span>教育经历</span>
+		    			</div>
+	    				<div class="education">
+	    					<table>
+	    						<tr>
+		    						<td>毕业院校:</td>
+		    						<td class="school"></td>
+		    					</tr>
+		    					<tr>
+		    						<td>入学日期:</td>
+		    						<td class="school"></td>
+		    					</tr>
+	    						<tr>
+		    						<td>学      历:</td>
+		    						<td class="school"></td>
+		    					</tr>
+	    						<tr>
+		    						<td>专      业:</td>
+		    						<td class="school"></td>
+		    					</tr>
+	    					</table>
+	    				</div>
+	    				<div class="phone">
+	    					<img src="img/tittle2.png"/>
+		    				<span>联系方式</span>
+	    				</div>
+	    				<div class="education">
+		    				<table>
+		    					<tr>
+		    						<td>联系 Q Q:</td>
+		    						<td class="QQ">583077407</td>
+		    					</tr>
+		    					<tr>
+		    						<td>联系电话:</td>
+		    						<td class="QQ">13138738578</td>
+		    					</tr>
+		    					<tr>
+		    						<td>电子邮箱:</td>
+		    						<td class="QQ">583077407@qq.com</td>
+		    					</tr>
+		    				</table>
+	    				</div>
+	    			</div>
+	    		</li>
+	    		<!--第一页-->
+	    		<li class="page" style="background-image: url(img/page_back1.jpg);background-size: 100% 100%;">
+	    			<div class="page4">
+	    				<div class="person">
+	    					<img src="img/person.png"/>
+		    				<span>基本信息</span>
+	    				</div>
+	    				<div class="message">
+		    				<table>
+		    					<tr>
+		    						<td>姓      名:</td>
+		    						<td id="name"></td>
+		    					</tr>
+		    					<tr>
+		    						<td>性      别:</td>
+		    						<td id="sex"></td>
+		    					</tr>
+		    					<tr>
+		    						<td>民      族:</td>
+		    						<td id="MZ"></td>
+		    					</tr>
+		    					<tr>
+		    						<td>出生日期:</td>
+		    						<td id="date"></td>
+		    					</tr>
+		    					<tr>
+		    						<td>身      高:</td>
+		    						<td id="height_"></td>
+		    					</tr>
+		    					<tr>
+		    						<td>籍       贯:</td>
+		    						<td id="JG"></td>
+		    					</tr>
+		    					<tr>
+		    						<td>政治面貌:</td>
+		    						<td id="ZZ"></td>
+		    					</tr>
+		    					<tr>
+		    						<td>婚姻状况:</td>
+		    						<td id="MR"></td>
+		    					</tr>
+		    					<tr>
+		    						<td>身体状况:</td>
+		    						<td id="heath"></td>
+		    					</tr>
+		    				</table>
+	    				</div>
+	    			</div>
+	    		</li>
+	    		<!--封面-->
+	    		<li class="page" style="background-image: url(img/page0_back.jpg);background-size: 100% 100%;">
+	    			<div class="page5">
+	    				<h style="position: absolute;left: 280px;top: 100px;font-size: 50px; writing-mode: tb-rl;letter-spacing: 25px;font-family: 'STXingkai';">个人简历</h>
+	    			</div>
+	    		</li>
+	    	</ul>
+	    </div>
+	    <script>
+	    	window.onload=function(){
+	    		var ali=document.getElementsByTagName("li");
+	    		var angel=0;
+	    		var index=0;
+	    		var k=0;
+	    		var a=[true,true,true,true,true,true];
+	    		
+	    		//翻页功能及数据显示函数调用
+	    		for (var i = 5; i >=0; i--) {
+	    			(function(n){
+	    			ali[i].onclick=function(){
+	    				if(a[n]){
+	    					this.style.zIndex=index;
+		    				this.style.transform="rotateY("+(-160+angel)+"deg)";
+		    				this.style.transition='2s';
+		    				/**文字自动输出定时器**/
+		    				setTimeout(function(num){
+		    					num=n;
+		    					if(num==5){
+		    						Name();
+		    					}else{
+		    						if (num==4) {
+		    							School();
+		    						} else{
+		    							if (num==3) {
+		    								Skill();
+		    							} else{
+		    								if (num==2) {
+		    									Pingjia();
+		    								} else{
+		    									kong_page4();
+		    								}
+		    								kong_page3()
+		    							}
+		    							kong_page2();
+		    						}
+		    						Kong();
+		    					}
+		    				},2000);
+		    				index++;
+		    				angel+=3;
+		    				a[n]=false;
+		    				document.getElementsByClassName("page"+n)[0].style.cssText="transition: opacity 1s;opacity: 0;";
+		    			}else{
+		    				for (j=n;j>=0;j--) {			    				
+			    				if(a[j]==false){
+			    					k++;
+			    					index--;
+		    					}
+			    				ali[j].style.zIndex=index;
+				    			ali[j].style.transform="rotateY(0deg)";
+				    			ali[j].style.transition='2s';
+			    				document.getElementsByClassName("page"+j)[0].style.cssText="transition: opacity 1s;opacity: 1;";
+		    				a[j]=true;
+		    				}
+//		    				文字自动输出定时器反序
+		    				setTimeout(function(num){
+		    						num=n;
+		    						if(num==1){
+		    						Pingjia();
+		    						}else{
+		    							if (num==2) {
+		    								Skill();
+		    							} else{
+		    								if (num==3) {
+		    									School();
+		    								} else{
+		    									if (num==4) {
+		    										Name();
+		    									} else{
+		    										Kong();
+		    									}
+		    									kong_page2();
+		    								}
+		    								kong_page3();
+		    							}
+		    							kong_page4();
+		    						}
+		    					},2000);
+		    				angel-=3*k;
+		    				k=0;
+		    			}
+	    		    }
+	    			})(i)
+	    		}
+	    		
+	    		//第一页文字自动输出
+	    		var name=document.getElementById("name");
+	    		var sex=document.getElementById("sex");
+	    		var mz=document.getElementById("MZ");
+	    		var date_=document.getElementById("date");
+	    		var height=document.getElementById("height_");
+	    		var jg=document.getElementById("JG");
+	    		var zz=document.getElementById("ZZ");
+	    		var mr=document.getElementById("MR");
+	    		var heath=document.getElementById("heath");
+	    		var str=["赖境登","男","汉","1995/11/13","173CM","广东","民众","未婚","健康"];
+	    		var pos=0;
+	    		
+	    		
+	    		function Kong(){
+	    				name.innerText="";
+	    				sex.innerText="";
+	    				mz.innerText="";
+	    				date_.innerText="";
+	    				height.innerText="";
+	    				jg.innerText="";
+	    				zz.innerText="";
+	    				mr.innerText="";
+	    				heath.innerText="";
+					}
+	    		
+	    		function Name(){
+		    		name.innerText=str[0].substring(0,pos)+"|";
+		    		var time0=setTimeout(Name,100);
+		    		if(pos++ > str[0].length){
+		    			name.innerText=str[0].substring(0,pos);
+		    			clearTimeout(time0);
+		    			pos=0;	
+		    			sex_();
+		    		}
+	    		}
+	    		function sex_(){
+	    			sex.innerText=str[1].substring(0,pos)+'|';
+	    			var time1=setTimeout(sex_,100);
+	    			if(pos++ > str[1].length){
+	    				sex.innerText=str[1].substring(0,pos);
+	    				clearTimeout(time1);
+	    				pos=0;
+	    				mz_();
+	    			}	    			
+	    		}
+	    		function mz_(){
+	    			mz.innerText=str[2].substring(0,pos)+'|';
+	    			var time2=setTimeout(mz_,100);
+	    			if(pos++ > str[2].length){
+	    				mz.innerText=str[2].substring(0,pos);
+	    				clearTimeout(time2);
+	    				pos=0;
+	    				_date_();
+	    			}	    			
+	    		}
+	    		function _date_(){
+	    			date_.innerText=str[3].substring(0,pos)+'|';
+	    			var time3=setTimeout(_date_,100);
+	    			if(pos++ > str[3].length){
+	    				date_.innerText=str[3].substring(0,pos);
+	    				clearTimeout(time3);
+	    				pos=0;
+	    				Height();
+	    			}	    			
+	    		}
+	    		function Height(){
+	    			height.innerText=str[4].substring(0,pos)+'|';
+	    			var time4=setTimeout(Height,100);
+	    			if(pos++ > str[4].length){
+	    				height.innerText=str[4].substring(0,pos);
+	    				clearTimeout(time4);
+	    				pos=0;
+	    				JG();
+	    			}	    			
+	    		}
+	    		function JG(){
+	    			jg.innerText=str[5].substring(0,pos)+'|';
+	    			var time5=setTimeout(JG,100);
+	    			if(pos++ > str[5].length){
+	    				jg.innerText=str[5].substring(0,pos);
+	    				clearTimeout(time5);
+	    				pos=0;
+	    				ZZ();
+	    			}	    			
+	    		}
+	    		function ZZ(){
+	    			zz.innerText=str[6].substring(0,pos)+'|';
+	    			var time6=setTimeout(ZZ,100);
+	    			if(pos++ > str[6].length){
+	    				zz.innerText=str[6].substring(0,pos);
+	    				clearTimeout(time6);
+	    				pos=0;
+	    				MR();
+	    			}	    			
+	    		}
+	    		function MR(){
+	    			mr.innerText=str[7].substring(0,pos)+'|';
+	    			var time6=setTimeout(MR,100);
+	    			if(pos++ > str[7].length){
+	    				mr.innerText=str[7].substring(0,pos);
+	    				clearTimeout(time6);
+	    				pos=0;
+	    				Heath();
+	    			}	    			
+	    		}
+	    		function Heath(){
+	    			heath.innerText=str[8].substring(0,pos)+'|';
+	    			var time6=setTimeout(Heath,100);
+	    			if(pos++ > str[8].length){
+	    				heath.innerText=str[8].substring(0,pos);
+	    				clearTimeout(time6);
+	    				pos=0;
+	    			}	    			
+	    		}
+	    		
+	    		//第二页变量
+	    		var school=document.getElementsByClassName("school");
+	    		var qq=document.getElementsByClassName("QQ");
+	    		var mes=['深圳信息职业技术学院','2015/09','大专','软件技术'];
+	    		var sch=0,dat=0,xue=0,zhu=0;
+	    		
+	    		function kong_page2(){
+	    			for (i=0;i<school.length;i++) {
+	    				school[i].innerText="";
+	    			}
+	    			for (j=0;j<qq.length;j++) {
+	    				qq[j].style.cssText="opacity: 0;";
+	    			}
+	    		}
+	    		
+//	    		第二页数据显示
+	    		function School(){
+	    			var time=setInterval(function(){
+	    				school[0].innerText=mes[0].substring(0,sch)+'|';
+	    				if(sch++ > mes[0].length){
+	    					school[0].innerText=mes[0].substring(0,sch);
+	    					clearInterval(time);
+	    					sch=0;
+	    					var time1=setInterval(function(){
+	    						school[1].innerText=mes[1].substring(0,dat)+'|';
+	    						if(dat++ > mes[1].length){
+	    							school[1].innerText=mes[1].substring(0,dat);
+	    							clearInterval(time1);
+	    							dat=0;
+	    							var time2=setInterval(function(){
+	    								school[2].innerText=mes[2].substring(0,xue)+'|';
+	    								if(xue++ > mes[2].length){
+	    									school[2].innerText=mes[2].substring(0,xue);
+	    									clearInterval(time2);
+	    									xue=0;
+	    									var time3=setInterval(function(){
+	    										school[3].innerText=mes[3].substring(0,zhu)+'|';
+	    										if(zhu++ > mes[3].length){
+	    											school[3].innerText=mes[3].substring(0,zhu);
+	    											clearInterval(time3);
+	    											zhu=0;
+	    											setTimeout(function(){
+	    												qq[0].style.cssText="opacity: 1;transition: 3s;"
+	    												setTimeout(function(){
+	    													qq[1].style.cssText="opacity: 1;transition: 3s;"
+	    													setTimeout(function(){
+	    														qq[2].style.cssText="opacity: 1;transition: 3s;"
+		    												},100);
+		    											},100);
+	    											},100);
+	    										}
+	    									},100);	
+	    								}
+	    							},100);
+	    						}
+	    					},100);
+	    				}
+	    			},100);
+	    		}
+	    		
+	    		//第三页数据显示
+	    		var skill=document.getElementsByClassName("skill");
+	    		var sk=0;
+	    		
+	    		function kong_page3(){
+	    			for (i=0;i<skill.length;i++) {
+	    				skill[i].style.cssText="opacity: 0;";
+	    			}
+	    		}
+	    		
+	    		function Skill(){
+	    			skill[sk].style.cssText="opacity: 1;transition: 1s;";
+	    			var skill_num=setTimeout(Skill,200);
+	    			if(sk++ > skill.length-2){
+	    				clearTimeout(skill_num);
+	    				sk=0;
+	    			}	
+	    		}
+	    		
+	    		//第四页数据显示
+	    		var pingjia=document.getElementsByClassName("pingjia")[0].getElementsByTagName("p")[0];
+	    		var zhiwei=document.getElementsByClassName("pingjia")[1].getElementsByTagName("p")[0];
+	    		var intro="本人待人友好，为人诚实谦虚。工作勤奋，认真负责，能吃苦耐劳，尽职尽责，有耐心。说到做到，决不推卸责任。";
+	    		var pj=0;
+	    		
+	    		function kong_page4(){
+	    			pingjia.innerText="";
+	    			zhiwei.style.cssText="opacity: 0;";
+	    			
+	    		}
+	    		
+	    		function Pingjia(){
+	    			pingjia.innerText=intro.substring(0,pj)+"|";
+	    			pj_time = setTimeout(Pingjia,100);
+	    			if(pj++ > intro.length){
+	    				pingjia.innerText=intro.substring(0,pj);
+	    				clearTimeout(pj_time);
+	    				pj=0;
+	    				zhiwei.style.cssText="opacity: 1; transition: 1s;";
+	    			}
+	    		}
+	    		
+	    	}
+	    </script>
+	</body>
+</html>

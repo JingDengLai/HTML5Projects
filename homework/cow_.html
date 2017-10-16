@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>牛商网</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			body{
+			}
+			
+			.top{
+				width: 100%;
+				height: 120px;
+			}
+			
+			.top_content{
+				width: 1000px;
+				margin: 0 auto;
+			}
+			
+			.logo{
+				background-color: white;
+				float: left;
+				width: 110px;
+				height: 120px;
+				border-right: 1px solid #F5F5F5;
+			}
+			
+			.logo img{
+				height: 120px;	
+			}
+			
+			.logo_right{
+				height: 120px;
+				width: 880px;
+				float: left;
+			}
+			.right_top{
+				height: 20px;
+			}
+			.right_top li{
+				line-height: 20px;
+				float: right;
+				list-style-type: none;
+				font-size: 12px;
+				width: 90px;
+				text-align: center;
+				color: #808080;
+				border-right: 1px solid #808080;
+			}
+			.right_bottom{
+				height: 100px;
+			}
+			.bottom_left{
+				width: 465px;
+				height: 100px;
+			}
+			.bottom_right{
+				padding: 22px 0;
+			}
+			
+			.bottom_left,.bottom_right{
+				float: left;
+			}
+			.bottom_left p:nth-child(1){
+				font-size: 13px;
+				margin: 10px 0 5px 15px;
+			}
+			.bottom_left p:nth-child(2){
+				font-size: 16px;
+				font-weight: bold;
+				margin-left: 15px;
+			}
+			.warp{
+				width: 1280px;
+				margin: 0 auto;
+			}
+			.content{
+				width: 1280px;
+				margin: 0 auto;
+			}
+			.content_0,.content_1,.content_2,.content_3,.content_4,.content_5{
+				margin-top: 80px;
+				width: 100%;
+			}
+			.content_0{
+				background-color: #F5F5F5;
+			}
+			.content_1,.content_2,.content_3,.content_4,.content_5,.tail_pic{
+				overflow: hidden;
+			}
+			.content_1_left{
+				margin-left: 300px;
+				margin-right: 70px;
+			}
+			.content_1_left,.content_1_right,.content_2_left,.content_2_right,.content_4_left,.content_4_right{
+				float: left;
+			}
+			.content_1_logo{
+				height: 80px;
+				overflow: hidden;
+				margin-left: 40px;
+			}
+			.content_1_text{
+				margin-top: 15px;
+			}
+			.content_1_text p{
+				line-height: 30px;
+				opacity: 0.6;
+				font-family: "微软雅黑";
+				font-weight: 500;
+			}
+			.content_1_text p:nth-child(4){
+				font-size: 40px;
+				font-family: "微软雅黑";
+				font-weight: 500;
+				margin: 20px 0 20px 0;
+			}
+			.content_2_left{
+				margin:0 30px 0 150px;
+			}
+			.content_2_right{
+				width: 400px;
+				height: 400px;
+			}
+			
+			.content_2_logo{
+				overflow: hidden;
+				margin: 40px 0 0 30px;
+			}
+			.content_2_right p{
+				line-height: 35px;
+				opacity: 0.6;
+				font-family: "微软雅黑";
+				font-weight: 500;
+				font-size: 16px;
+			}
+			.content_2_right p:nth-child(4){
+				font-size: 40px;
+				font-family: "微软雅黑";
+				font-weight: 500;
+				margin: 20px 0 20px 0;
+			}
+			.content_4{
+				height: 570px;
+			}
+			.content_4_left{
+				margin:60px 30px 0 150px;
+				border-radius: 50%;
+				-moz-box-shadow: -40px 40px 30px #D0D0D0;
+    			-webkit-box-shadow: -40px 40px 30px #D0D0D0;
+    			box-shadow: -40px 40px 30px #D0D0D0;
+			}
+			.content_4_logo{
+				overflow: hidden;
+				margin: 40px 0 0 30px;
+			}
+			.content_4_right p{
+				line-height: 35px;
+				opacity: 0.6;
+				font-family: "微软雅黑";
+				font-weight: 500;
+				font-size: 16px;
+			}
+			.content_4_right p:nth-child(5){
+				font-size: 40px;
+				font-family: "微软雅黑";
+				font-weight: 500;
+				margin: 20px 0 20px 0;
+			}
+			.content_5_left,.content_5_right{
+				float: right;
+				
+			}
+			.content_5_left{
+				margin-top: 50px;
+			}
+			.content_5_right{
+				margin-top: 100px;
+			}
+			.content_5_left{
+				text-align: center;
+				position: relative;
+				left: 125px;
+			}
+			.content_5_text p{
+				line-height: 30px;
+				font-size: 14px;
+				opacity: 0.6;
+			}
+			.content_5_text p:nth-child(5){
+				font-size: 40px;
+				font-family: "微软雅黑";
+				font-weight: 500;
+				margin: 20px 0 20px 0;
+			}
+			.tail{	
+				background-color: #F5F5F5;
+			}
+			.tail_content{
+				width: 1000px;
+				margin: 0px auto;
+			}
+			.tail_content p:nth-child(1){
+				font-size: 40px;
+				color: #FF5809;
+				font-family: "微软雅黑";
+				font-weight: 500;
+				margin-bottom: 15px;
+			}
+			.tail_content p:nth-child(2){
+				opacity: 0.5;
+				font-family: "微软雅黑";
+				font-weight: 600;
+				font-size: 14px;
+				margin-bottom: 15px;
+			}
+			.tail,.tail_pic{
+				text-align: center;
+			}
+			.tail li{
+				float: left;
+				list-style-type: none;
+			}
+			.ptext{
+				text-align: center;
+				margin-top: 50px;
+			}
+			.ptext p{
+				line-height: 30px;
+			}
+			.ptext p:nth-child(1),.ptext p:nth-child(2){
+				font-size: 14px;
+				opacity: 0.6;
+			}
+			.ptext p:nth-child(3){
+				font-family: "微软雅黑";
+				font-weight: bold;
+				
+			}
+			.tail_best{
+				width: 100%;
+				background-color: #000;
+				opacity: 0.8;
+				overflow: hidden;
+			}
+			.tail_best_left{
+				width: 600px;
+				height: 280px;
+				margin-left: 220px;
+			}
+			.tail_best_right{
+				width: 300px;
+				height: 280px;
+			}
+			.tail_best_left,.tail_best_right{
+				float: left;
+			}
+			.message{
+				width: 100%;
+				background-color: #9D9D9D;
+				margin-bottom: 30px;
+			}
+			.tail_best_left_top,.tail_best_left_bottom{
+				overflow: hidden;
+				margin-top: 40px;
+			}
+			.tail_best_left_top li{
+				float: left;
+				list-style-type: none;
+				width: 150px;
+				font-size: 14px;
+				color: white;
+			}
+			.tail_best_left_bottom ul{
+				float: left;
+				list-style-type: none;
+				width: 150px;
+			}
+			.tail_best_left_bottom li{
+				line-height: 30px;
+				font-size: 12px;
+				color: #D0D0D0;
+			}
+			.tail_best_right img{
+				margin: 60px 0 0 80px;
+			}
+			.tail_best_right p{
+				margin-top: 20px;
+				font-size: 14px;
+				margin-left: 50px;
+				color: #D0D0D0;
+			}
+			.tail_best_right p a{
+				color: #D0D0D0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="top_content">
+				<div class="logo">
+					<img src="img/logo.png"/>
+				</div><!--头部左边结束-->
+				<div class="logo_right">
+					<div class="right_top">
+						<ul>
+							<li style="border: none;">联系牛商网</li>
+							<li>建站进度查询</li>
+							<li>域名空间</li>
+							<li>牛商学堂</li>
+							<li>牛商微讲堂讲座</li>
+						</ul>
+					</div>
+					<div class="right_bottom">
+						<div class="bottom_left">
+							<p><b>全国驻地点</b><span><select><option>选择城市</option></select></span></p>
+							<p>让传统企业在网上牛起来!</p>
+						</div>
+						<div class="bottom_right">
+							<img src="img/咨询电话.png" />
+						</div>
+					</div>
+				</div><!--头部右边结束-->
+			</div>
+		</div><!--/*头部结束*/-->
+		<div class="warp">
+			<img src="img/顶栏导航.png" />
+		</div><!--warp结束-->
+		<div class="content">
+			<div class="content_0">
+				<img src="img/真的好.png" />
+			</div><!--content_0结束-->
+			<div class="content_1">
+				<div class="content_1_left">
+					<div class="content_1_logo">
+						<img src="img/logo.png" />
+					</div>
+					<div class="content_1_text">
+						<p>从网站建设的6大定位入手，定位定天下，</p>
+						<p>让流量更精准，让询问量更高，</p>
+						<p>让运营更省钱，让网站更盈利......</p>
+						<p>更省钱、更盈利</p>
+						<p style="opacity: 1;"><a href="javascript:#" style="text-decoration: none;font-size: 13px;color: deepskyblue;">这5步，不是谁都能做得号的>>></a></p>
+					</div>
+				</div>
+				<div class="content_1_right">
+					<img src="img/电脑.png" />
+				</div>
+			</div><!--content_1结束-->
+			<div class="content_2">
+				<div class="content_2_left">
+					<img src="img/seo.png" />
+				</div>
+				<div class="content_2_right">
+					<div class="content_2_logo">
+						<img src="img/放大镜.png" />
+					</div>
+					<div class="content_2_text">
+						<p>所有建站公司都懂程序代码，</p>
+						<p>但不是所有建站公司都懂网站SEO优化，</p>
+						<p>网站不做SEO等于白做......</p>
+						<p>搜索引擎   更喜欢</p>
+						<p style="opacity: 1;"><a href="javascript:#;" style="text-decoration: none;font-size: 13px;color: deepskyblue;">免费排名进入首页不是梦想，您必须了解>>></a></p>
+					</div>
+				</div>
+			</div><!--content_2结束-->
+			<div class="content_3">
+				<img src="img/8.png" />
+			</div><!--content_3结束-->
+			<div class="content_4">
+				<div class="content_4_left">
+					<img src="img/摄像头.png" />
+				</div>
+				<div class="content_4_right">
+					<div class="content_4_logo">
+						<img src="img/瞄准.png" />
+					</div>
+					<div class="content_4_text">
+						<p>突出核心内容，多做减法，</p>
+						<p>聚焦访客眼球，</p>
+						<p>让您的网站品牌感远超竞争对手，</p>
+						<p>让成交转化率更高......</p>
+						<p>以简为上，让网站更具品牌感</p>
+						<p style="opacity: 1;"><a href="javascript:#;" style="text-decoration: none;font-size: 13px;color: deepskyblue;">如何抓住用户的心>>></a></p>
+					</div>
+				</div>
+			</div><!--content_4结束-->
+			<div class="content_5">
+				<div class="content_5_right">
+					<img src="img/书本.png" />
+				</div>
+				<div class="content_5_left">
+					<div class="content_5_logo">
+						<img src="img/笑脸.png" />
+					</div>
+					<div class="content_5_text">
+						<p>好用，更要好看，</p>
+						<p>在今天这个讲究高颜值的时代，</p>
+						<p>您选对乐建站公司吗？您网站有专业设计师设计吗？</p>
+						<p>您想在竞争对手中脱颖而出吗？</p>
+						<p>高颜值   带来高关注</p>
+						<p style="opacity: 1;"><a href="javascript:#;" style="text-decoration: none;font-size: 13px;color: deepskyblue;">亲，要不断追求>>></a></p>
+					</div>
+				</div>
+			</div><!--content_5结束-->
+		</div><!--content结束-->
+		<div class="tail">
+			<div style="height: 50px;"></div>
+			<div class="tail_content">
+				<p>选择，大于努力</p>
+				<p>牛商网-营销型网站标准指定者，9年时间帮主近万家企业打造网络快速盈利机器;</p>
+				<div class="tail_pic">
+					<ul>
+						<li>
+							<img src="img/图1.png"/>
+							<p>营销型PC网站建设服务</p>
+							<p><a href="javascript:#;" style="text-decoration: none;font-size: 12px;">我要建站>>></a></p>
+						</li>
+						<li>
+							<img src="img/图2.png"/>
+							<p>手机网站建设</p>
+							<p><a href="javascript:#;" style="text-decoration: none;font-size: 12px;">我要建站>>></a></p>
+						</li>
+						<li>
+							<img src="img/图3.png"/>
+							<p>孵化/托管代运营服务</p>
+							<p><a href="javascript:#;" style="text-decoration: none;font-size: 12px;">我要运营>>></a></p>
+						</li>
+						<li>
+							<img src="img/图4.png"/>
+							<p>快速见效系统</p>
+							<p><a href="javascript:#;" style="text-decoration: none;font-size: 12px;">我要咨询>>></a></p>
+						</li>
+					</ul>
+				</div>
+			</div><!--tail_content结束-->
+		</div><!--tail结束-->
+		<div class="ptext">
+			<p>在中国，建站公司多如皮毛，能够生存5年以上的则是凤毛麟角，</p>
+			<p>如果你不想您的网站成为孤儿网站，</p>
+			<p>选择，一定大于努力!</p>
+		</div><!--ptext结束-->
+		<div style="margin: 0 auto;">
+			<img src="img/40373531067515495.png" />
+		</div>
+		<div class="tail_best">
+			<div class="tail_best_left">
+				<div class="tail_best_left_top">
+					<ul>
+						<li>牛商网产品<br>PRODUCT</li>
+						<li>牛商网服务<br>SERVICE</li>
+						<li>网络营销方案<br>CASE</li>
+						<li>关于牛商网<br>ABOUT US</li>
+					</ul>
+				</div>
+				<div class="tail_best_left_bottom">
+					<ul>
+						<li>营销型网站</li>
+						<li>营销型小程序</li>
+						<li>手机网站</li>
+						<li>孵化代运营</li>
+					</ul>
+					<ul>
+						<li>牛商微讲堂</li>
+						<li>牛商讲堂</li>
+						<li>增值沙龙</li>
+						<li>十大牛商</li>
+					</ul>
+					<ul>
+						<li>没网站怎么办</li>
+						<li>网站无人打理</li>
+						<li>移动时代不慌</li>
+						<li>他们怎么做的</li>
+					</ul>
+					<ul>
+						<li>公司介绍</li>
+						<li>联系牛商网</li>
+						<li>牛商网大事记</li>
+						<li>牛商哲学</li>
+					</ul>
+				</div>
+			</div>
+			<div class="tail_best_right">
+				<img src="img/QQ浏览器截屏未命名.png" />
+				<p>微信公众号|关注牛商网</p>
+				<p><a href="javascript:#;">了解牛商网的客户如何赚钱</a></p>
+			</div>
+		</div>
+		<div class="message">
+			<div style="width: 1000px;margin: 0 auto;">
+				<img src="img/dd.png" />
+			</div>
+		</div>
+	</body>
+</html>

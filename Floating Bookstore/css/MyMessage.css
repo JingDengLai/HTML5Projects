@@ -1,0 +1,252 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	width: 100%;
+	position: absolute;
+}
+
+@media screen and (max-width: 960px) {
+	
+#head{
+	width: 100%;
+	height: 45px;
+	background-color:#D0D0D0 ;
+	opacity: 0.8;
+	border: 1px solid #D0D0D0;
+}
+#head div{
+	float: left;
+}
+
+#head #return{
+	width: 6%;
+	height: 20px;
+	margin-left: 2%;
+	margin-top: 3.5%;
+}
+
+#head #return img{
+	height: 100%;
+	width: 100%;
+}
+
+#head #span{
+	height: 60%;
+	width: 30%;
+	margin-top: 3.5%;
+	margin-left: 5%;
+	color: white;
+}
+
+#titles{
+	width: 100%;
+	height: 35px;
+}
+
+#titles ul{
+	width: 100%;
+	height: 100%;
+}
+
+#titles li{
+	width: 33.3%;
+	height: 100%;
+	text-align: center;
+	float: left;
+	list-style: none;
+	line-height: 200%;
+	
+}
+
+.select{
+	color: limegreen;
+	border-bottom: 2px solid limegreen;
+}
+
+#content{
+	width: 100%;
+	margin-top: 30px;
+}
+
+#content #message,#borrow-book,#reservebook{
+	width: 100%;
+}
+
+#content #message p{
+	margin: 30px auto;
+	line-height: 25px;
+	width: 80%;
+	border-bottom: solid 1px gray;
+	border-radius: 5%;
+}
+
+#book-content{
+	width: 100%;
+	height: 100px;
+	margin-top: 20px;
+	border-bottom: 1px solid gray;
+}
+
+#book-content #img{
+	width: 20%;
+	height: 80%;
+	float: left;
+	list-style: none;
+}
+
+#book-content #img img{
+	height: 100%;
+	width: 100%;
+}
+
+#book-content #name{
+	width: 72%;
+	height: 90%;
+	float: right;
+	list-style: none;
+} 
+
+#book-content #name ul{
+	width: 100%;
+	height: 100%;
+	list-style: none;
+}
+
+#book-content #name ul #bookname{
+	width: 100%;
+	height: 20%;
+	margin-top: 2%;
+}
+
+#book-content #name ul #writer,#borrow-date,#return-date{
+	width: 100%;
+	height: 20%;
+	margin-top: 1%;
+}
+}
+
+/*-------------------电脑端样式-----------------------*/
+@media screen and (min-width: 960px) {
+	#head{
+	width: 40%;
+	margin: 0 auto;
+	height: 45px;
+	background-color:#D0D0D0 ;
+	border: 1px solid #D0D0D0;
+}
+#head div{
+	float: left;
+}
+
+#head #return{
+	width: 6%;
+	height: 20px;
+	margin-left: 2%;
+	margin-top: 2%;
+}
+
+#head #return img{
+	height: 100%;
+	width: 100%;
+}
+
+#head #span{
+	height: 60%;
+	width: 30%;
+	margin-top: 2%;
+	margin-left: 5%;
+	color: white;
+}
+
+#titles{
+	width: 40%;
+	height: 35px;
+	margin: 0 auto;
+}
+
+#titles ul{
+	width: 100%;
+	height: 100%;
+}
+
+#titles li{
+	width: 33.3%;
+	height: 100%;
+	text-align: center;
+	float: left;
+	list-style: none;
+	line-height: 200%;
+	
+}
+
+.select{
+	color: limegreen;
+	border-bottom: 2px solid limegreen;
+}
+
+#content{
+	width: 40%;
+	margin-top: 30px;
+	margin: 0 auto;
+}
+
+#content #message,#borrow-book,#reservebook{
+	width: 100%;
+}
+
+#content #message p{
+	margin: 30px auto;
+	line-height: 25px;
+	width: 80%;
+	border-bottom: solid 1px gray;
+	border-radius: 5%;
+}
+
+#book-content{
+	width: 100%;
+	height: 100px;
+	margin-top: 20px;
+	border-bottom: 1px solid gray;
+}
+
+#book-content #img{
+	width: 20%;
+	height: 80%;
+	float: left;
+	list-style: none;
+}
+
+#book-content #img img{
+	height: 100%;
+	width: 100%;
+}
+
+#book-content #name{
+	width: 72%;
+	height: 90%;
+	float: right;
+	list-style: none;
+} 
+
+#book-content #name ul{
+	width: 100%;
+	height: 100%;
+	list-style: none;
+}
+
+#book-content #name ul #bookname{
+	width: 100%;
+	height: 20%;
+	margin-top: 2%;
+}
+
+#book-content #name ul #writer,#borrow-date,#return-date{
+	width: 100%;
+	height: 20%;
+	margin-top: 1%;
+}
+	}
+
